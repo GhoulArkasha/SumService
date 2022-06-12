@@ -1,2 +1,4 @@
-test/task/SpringProject/SumServiceTest.java
- test.task.SpringProject.SumServiceTest
+test/task/SpringProject/controller/SumControllerTest.java
+ test.task.SpringProject.controller.SumControllerTest
+test/task/SpringProject/service/SumServiceTest.java
+ test.task.SpringProject.service.SumServiceTest

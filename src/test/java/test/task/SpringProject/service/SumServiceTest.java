@@ -1,4 +1,4 @@
-package test.task.SpringProject;
+package test.task.SpringProject.service;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;

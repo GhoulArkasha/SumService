@@ -1,0 +1,336 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="test.task.SpringProject.controller.SumControllerTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2022-06-12T18:49:50" hostname="WIN-J18VR2IUORM" time="6.27">
+  <properties/>
+  <testcase name="removeRecordControllerTest()" classname="test.task.SpringProject.controller.SumControllerTest" time="5.663"/>
+  <testcase name="addRecordControllerTest()" classname="test.task.SpringProject.controller.SumControllerTest" time="0.373"/>
+  <testcase name="sumRecordControllerTest()" classname="test.task.SpringProject.controller.SumControllerTest" time="0.225"/>
+  <system-out><![CDATA[21:49:08.061 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating CacheAwareContextLoaderDelegate from class [org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate]
+21:49:08.256 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating BootstrapContext using constructor [public org.springframework.test.context.support.DefaultBootstrapContext(java.lang.Class,org.springframework.test.context.CacheAwareContextLoaderDelegate)]
+21:49:08.356 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating TestContextBootstrapper for test class [test.task.SpringProject.controller.SumControllerTest] from class [org.springframework.boot.test.context.SpringBootTestContextBootstrapper]
+21:49:08.451 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [test.task.SpringProject.controller.SumControllerTest], using SpringBootContextLoader
+21:49:08.476 [Test worker] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [test.task.SpringProject.controller.SumControllerTest]: class path resource [test/task/SpringProject/controller/SumControllerTest-context.xml] does not exist
+21:49:08.477 [Test worker] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [test.task.SpringProject.controller.SumControllerTest]: class path resource [test/task/SpringProject/controller/SumControllerTestContext.groovy] does not exist
+21:49:08.488 [Test worker] INFO org.springframework.test.context.support.AbstractContextLoader - Could not detect default resource locations for test class [test.task.SpringProject.controller.SumControllerTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+21:49:08.497 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [test.task.SpringProject.controller.SumControllerTest]: SumControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+21:49:08.783 [Test worker] DEBUG org.springframework.test.context.support.ActiveProfilesUtils - Could not find an 'annotation declaring class' for annotation type [org.springframework.test.context.ActiveProfiles] and class [test.task.SpringProject.controller.SumControllerTest]
+21:49:09.433 [Test worker] DEBUG org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider - Identified candidate component class: file [D:\Programming\SpringProject\build\classes\java\main\test\task\SpringProject\SpringProjectApplication.class]
+21:49:09.437 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration test.task.SpringProject.SpringProjectApplication for test class test.task.SpringProject.controller.SumControllerTest
+21:49:09.986 [Test worker] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - @TestExecutionListeners is not present for class [test.task.SpringProject.controller.SumControllerTest]: using defaults.
+21:49:09.990 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+21:49:10.169 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@2defbcbb, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@2ec8a4c3, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@5ca7ebe3, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@3e07f7f2, org.springframework.test.context.support.DirtiesContextTestExecutionListener@6edd8eed, org.springframework.test.context.transaction.TransactionalTestExecutionListener@558d149, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@66c3daf2, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@67fa09bf, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@65d2594b, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@26c31e21, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@5eaf5441, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@692f09da]
+21:49:10.183 [Test worker] DEBUG org.springframework.test.context.support.AbstractDirtiesContextTestExecutionListener - Before test class: context [DefaultTestContext@6d30ca1e testClass = SumControllerTest, testInstance = [null], testMethod = [null], testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@6d905368 testClass = SumControllerTest, locations = '{}', classes = '{class test.task.SpringProject.SpringProjectApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@e7e8512, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@26d185cf, [ImportsContextCustomizer@3f0ff3a3 key = [org.springframework.boot.test.autoconfigure.web.servlet.MockMvcAutoConfiguration, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcSecurityAutoConfiguration, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcWebClientAutoConfiguration, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcWebDriverAutoConfiguration]], org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@31c97512, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@1766eade, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@20691660], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.activateListener' -> true]], class annotated with @DirtiesContext [false] with mode [null].
+21:49:10.326 [Test worker] DEBUG org.springframework.test.context.support.TestPropertySourceUtils - Adding inlined properties to environment: {spring.jmx.enabled=false, org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true, server.port=-1}
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::        (v2.1.7.RELEASE)
+
+2022-06-12 21:49:11.985  INFO 6688 --- [    Test worker] t.t.S.controller.SumControllerTest       : Starting SumControllerTest on WIN-J18VR2IUORM with PID 6688 (started by Uzer in D:\Programming\SpringProject)
+2022-06-12 21:49:11.998  INFO 6688 --- [    Test worker] t.t.S.controller.SumControllerTest       : No active profile set, falling back to default profiles: default
+2022-06-12 21:49:17.023  INFO 6688 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2022-06-12 21:49:17.125  INFO 6688 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 63ms. Found 0 repository interfaces.
+2022-06-12 21:49:19.261  INFO 6688 --- [    Test worker] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$37906ea4] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-06-12 21:49:25.092  INFO 6688 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-06-12 21:49:25.107  WARN 6688 --- [    Test worker] com.zaxxer.hikari.util.DriverDataSource  : Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
+2022-06-12 21:49:30.401  INFO 6688 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-06-12 21:49:31.392  INFO 6688 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-06-12 21:49:32.577  INFO 6688 --- [    Test worker] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.7.Final
+2022-06-12 21:49:35.342  INFO 6688 --- [    Test worker] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-06-12 21:49:36.206  INFO 6688 --- [    Test worker] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2022-06-12 21:49:39.245  INFO 6688 --- [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-06-12 21:49:39.303  INFO 6688 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-06-12 21:49:43.385  INFO 6688 --- [    Test worker] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-06-12 21:49:46.116  WARN 6688 --- [    Test worker] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-06-12 21:49:50.488  INFO 6688 --- [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2022-06-12 21:49:50.490  INFO 6688 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2022-06-12 21:49:50.565  INFO 6688 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 73 ms
+2022-06-12 21:49:50.697  INFO 6688 --- [    Test worker] t.t.S.controller.SumControllerTest       : Started SumControllerTest in 40.317 seconds (JVM running for 48.749)
+2022-06-12 21:49:52.753  WARN 6688 --- [    Test worker] org.hibernate.orm.connections.pooling    : HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2022-06-12 21:49:52.758  INFO 6688 --- [    Test worker] org.hibernate.orm.connections.pooling    : HHH10001005: using driver [null] at URL [jdbc:mysql://localhost:3306/test_task?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC]
+2022-06-12 21:49:52.761  INFO 6688 --- [    Test worker] org.hibernate.orm.connections.pooling    : HHH10001001: Connection properties: {user=root, password=****, characterEncoding=utf8}
+2022-06-12 21:49:52.763  INFO 6688 --- [    Test worker] org.hibernate.orm.connections.pooling    : HHH10001003: Autocommit mode: false
+2022-06-12 21:49:52.787  INFO 6688 --- [    Test worker] .c.i.DriverManagerConnectionProviderImpl : HHH000115: Hibernate connection pool size: 20 (min=1)
+2022-06-12 21:49:53.325  INFO 6688 --- [    Test worker] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+Hibernate: 
+    select
+        sumentity0_.name as name1_0_0_,
+        sumentity0_.value as value2_0_0_ 
+    from
+        sum_entity sumentity0_ 
+    where
+        sumentity0_.name=?
+Hibernate: 
+    insert 
+    into
+        sum_entity
+        (value, name) 
+    values
+        (?, ?)
+Hibernate: 
+    select
+        sumentity0_.name as name1_0_0_,
+        sumentity0_.value as value2_0_0_ 
+    from
+        sum_entity sumentity0_ 
+    where
+        sumentity0_.name=?
+Hibernate: 
+    select
+        sumentity_.name,
+        sumentity_.value as value2_0_ 
+    from
+        sum_entity sumentity_ 
+    where
+        sumentity_.name=?
+Hibernate: 
+    delete 
+    from
+        sum_entity 
+    where
+        name=?
+
+MockHttpServletRequest:
+      HTTP Method = POST
+      Request URI = /records/remove
+       Parameters = {}
+          Headers = [Content-Type:"application/json;charset=UTF-8"]
+             Body = {"name":"name098","value":"123"}
+    Session Attrs = {}
+
+Handler:
+             Type = test.task.SpringProject.controller.SumController
+           Method = public org.springframework.http.ResponseEntity<test.task.SpringProject.model.DAO.ResponseModel> test.task.SpringProject.controller.SumController.removeRecord(test.task.SpringProject.model.DAO.SumModel)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 200
+    Error message = null
+          Headers = [Content-Type:"application/json;charset=UTF-8"]
+     Content type = application/json;charset=UTF-8
+             Body = {"code":0,"description":"ОК"}
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+Hibernate: 
+    select
+        sumentity0_.name as name1_0_0_,
+        sumentity0_.value as value2_0_0_ 
+    from
+        sum_entity sumentity0_ 
+    where
+        sumentity0_.name=?
+Hibernate: 
+    insert 
+    into
+        sum_entity
+        (value, name) 
+    values
+        (?, ?)
+
+MockHttpServletRequest:
+      HTTP Method = POST
+      Request URI = /records/add
+       Parameters = {}
+          Headers = [Content-Type:"application/json;charset=UTF-8"]
+             Body = {"name":"name123456789","value":"123"}
+    Session Attrs = {}
+
+Handler:
+             Type = test.task.SpringProject.controller.SumController
+           Method = public org.springframework.http.ResponseEntity<test.task.SpringProject.model.DAO.ResponseModel> test.task.SpringProject.controller.SumController.addRecord(test.task.SpringProject.model.DAO.SumModel)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 200
+    Error message = null
+          Headers = [Content-Type:"application/json;charset=UTF-8"]
+     Content type = application/json;charset=UTF-8
+             Body = {"code":0,"description":"ОК"}
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+Hibernate: 
+    select
+        sumentity0_.name as name1_0_0_,
+        sumentity0_.value as value2_0_0_ 
+    from
+        sum_entity sumentity0_ 
+    where
+        sumentity0_.name=?
+Hibernate: 
+    select
+        sumentity_.name,
+        sumentity_.value as value2_0_ 
+    from
+        sum_entity sumentity_ 
+    where
+        sumentity_.name=?
+Hibernate: 
+    delete 
+    from
+        sum_entity 
+    where
+        name=?
+Hibernate: 
+    select
+        sumentity0_.name as name1_0_0_,
+        sumentity0_.value as value2_0_0_ 
+    from
+        sum_entity sumentity0_ 
+    where
+        sumentity0_.name=?
+Hibernate: 
+    insert 
+    into
+        sum_entity
+        (value, name) 
+    values
+        (?, ?)
+Hibernate: 
+    select
+        sumentity0_.name as name1_0_0_,
+        sumentity0_.value as value2_0_0_ 
+    from
+        sum_entity sumentity0_ 
+    where
+        sumentity0_.name=?
+Hibernate: 
+    insert 
+    into
+        sum_entity
+        (value, name) 
+    values
+        (?, ?)
+Hibernate: 
+    select
+        sumentity0_.name as name1_0_0_,
+        sumentity0_.value as value2_0_0_ 
+    from
+        sum_entity sumentity0_ 
+    where
+        sumentity0_.name=?
+Hibernate: 
+    select
+        sumentity0_.name as name1_0_0_,
+        sumentity0_.value as value2_0_0_ 
+    from
+        sum_entity sumentity0_ 
+    where
+        sumentity0_.name=?
+
+MockHttpServletRequest:
+      HTTP Method = POST
+      Request URI = /records/sum
+       Parameters = {}
+          Headers = [Content-Type:"application/json;charset=UTF-8"]
+             Body = {"first":"name0","second":"name9"}
+    Session Attrs = {}
+
+Handler:
+             Type = test.task.SpringProject.controller.SumController
+           Method = public org.springframework.http.ResponseEntity<test.task.SpringProject.model.DAO.ResponseModel> test.task.SpringProject.controller.SumController.sumRecord(test.task.SpringProject.model.DAO.SumRequestModel)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 200
+    Error message = null
+          Headers = [Content-Type:"application/json;charset=UTF-8"]
+     Content type = application/json;charset=UTF-8
+             Body = {"code":0,"description":"ОК","sum":246}
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+Hibernate: 
+    select
+        sumentity0_.name as name1_0_0_,
+        sumentity0_.value as value2_0_0_ 
+    from
+        sum_entity sumentity0_ 
+    where
+        sumentity0_.name=?
+Hibernate: 
+    select
+        sumentity_.name,
+        sumentity_.value as value2_0_ 
+    from
+        sum_entity sumentity_ 
+    where
+        sumentity_.name=?
+Hibernate: 
+    delete 
+    from
+        sum_entity 
+    where
+        name=?
+Hibernate: 
+    select
+        sumentity0_.name as name1_0_0_,
+        sumentity0_.value as value2_0_0_ 
+    from
+        sum_entity sumentity0_ 
+    where
+        sumentity0_.name=?
+Hibernate: 
+    select
+        sumentity_.name,
+        sumentity_.value as value2_0_ 
+    from
+        sum_entity sumentity_ 
+    where
+        sumentity_.name=?
+Hibernate: 
+    delete 
+    from
+        sum_entity 
+    where
+        name=?
+]]></system-out>
+  <system-err><![CDATA[Loading class `com.mysql.jdbc.Driver'. This is deprecated. The new driver class is `com.mysql.cj.jdbc.Driver'. The driver is automatically registered via the SPI and manual loading of the driver class is generally unnecessary.
+]]></system-err>
+</testsuite>
