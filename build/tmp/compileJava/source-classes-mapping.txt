@@ -12,14 +12,14 @@ test/task/SpringProject/SpringProjectApplication.java
  test.task.SpringProject.SpringProjectApplication
 test/task/SpringProject/repository/SumRepository.java
  test.task.SpringProject.repository.SumRepository
-test/task/SpringProject/exception/RecordNotFoundException.java
- test.task.SpringProject.exception.RecordNotFoundException
+test/task/SpringProject/controller/SumController.java
+ test.task.SpringProject.controller.SumController
 test/task/SpringProject/exception/SessionCreationException.java
  test.task.SpringProject.exception.SessionCreationException
 test/task/SpringProject/exception/DataIsNullException.java
  test.task.SpringProject.exception.DataIsNullException
-test/task/SpringProject/exception/ServerException.java
- test.task.SpringProject.exception.ServerException
+test/task/SpringProject/model/DAO/SumRequestModel.java
+ test.task.SpringProject.model.DAO.SumRequestModel
 test/task/SpringProject/model/enums/Response.java
  test.task.SpringProject.model.enums.Response
 test/task/SpringProject/exception/RecordAlreadyExistsException.java
@@ -30,9 +30,9 @@ test/task/SpringProject/model/DAO/SumModel.java
  test.task.SpringProject.model.DAO.SumModel
 test/task/SpringProject/model/DAO/ResponseModel.java
  test.task.SpringProject.model.DAO.ResponseModel
-test/task/SpringProject/model/DAO/SumRequestModel.java
- test.task.SpringProject.model.DAO.SumRequestModel
-test/task/SpringProject/controller/SumController.java
- test.task.SpringProject.controller.SumController
 test/task/SpringProject/service/SumService.java
  test.task.SpringProject.service.SumService
+test/task/SpringProject/exception/RecordNotFoundException.java
+ test.task.SpringProject.exception.RecordNotFoundException
+test/task/SpringProject/exception/ServerException.java
+ test.task.SpringProject.exception.ServerException

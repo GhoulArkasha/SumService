@@ -6,11 +6,13 @@ import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
+import test.task.SpringProject.entity.SumEntity;
 import test.task.SpringProject.exception.ServerException;
 import test.task.SpringProject.model.DAO.ResponseModel;
 import test.task.SpringProject.model.DAO.SumModel;
 import test.task.SpringProject.model.DAO.SumRequestModel;
 import test.task.SpringProject.model.DAO.SumResponseModel;
+import test.task.SpringProject.repository.SumRepository;
 import test.task.SpringProject.service.SumService;
 
 @RunWith(SpringRunner.class)
@@ -18,6 +20,9 @@ import test.task.SpringProject.service.SumService;
 public class SumServiceTest {
     @Autowired
     private SumService sumService;
+
+    @Autowired
+    private SumRepository sumRepo;
 
     @Test
     public void addRecord() throws ServerException {
@@ -27,7 +32,7 @@ public class SumServiceTest {
 
         ResponseModel response = sumService.addRecord(model);
 
-        Assertions.assertEquals(0L, (long) response.getCode());
+        Assertions.assertEquals(0L, (response.getCode()).longValue());
     }
 
     @Test
@@ -39,7 +44,10 @@ public class SumServiceTest {
         sumService.addRecord(model);
         ResponseModel response = sumService.removeRecord(model);
 
-        Assertions.assertEquals(0L, (long) response.getCode());
+        SumEntity entity = sumRepo.getById(model.getName());
+
+        Assertions.assertEquals(0L, (response.getCode()).longValue());
+        Assertions.assertNull(entity);
     }
 
     @Test
@@ -61,7 +69,7 @@ public class SumServiceTest {
 
         SumResponseModel response = (SumResponseModel) sumService.sumRecord(model);
 
-        Assertions.assertEquals(0L, (long) response.getCode());
-        Assertions.assertEquals(127L, (long) response.getSum());
+        Assertions.assertEquals(0L, (response.getCode()).longValue());
+        Assertions.assertEquals(127L, (response.getSum()).longValue());
     }
 }

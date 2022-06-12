@@ -53,24 +53,16 @@ public class SumService {
 
 
     public ResponseModel sumRecord(SumRequestModel model) throws ServerException {
-        if (!isRecordExists(model)) {
-            throw new RecordNotFoundException();
-        }
-
-        SumEntity first = sumRepo.getById(model.getFirst());
-        SumEntity second = sumRepo.getById(model.getSecond());
-
-        Long sum = first.getValue() + second.getValue();
-        return new SumResponseModel(Response.OK, sum);
-    }
-
-
-    private boolean isRecordExists(SumRequestModel model) throws ServerException {
         if (model.getFirst() != null && model.getSecond() != null) {
             SumEntity first = sumRepo.getById(model.getFirst());
             SumEntity second = sumRepo.getById(model.getSecond());
 
-            return first.getName() != null && second.getName() != null;
+            if (first == null || second == null) {
+                throw new RecordNotFoundException();
+            }
+
+            Long sum = first.getValue() + second.getValue();
+            return new SumResponseModel(Response.OK, sum);
         } else {
             throw new DataIsNullException();
         }
